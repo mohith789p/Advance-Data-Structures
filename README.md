@@ -2,7 +2,7 @@
 
 1. 🌳 Construct an AVL tree for a given set of elements which are stored in a file. And implement insert and delete operations on the constructed tree. Write contents of the tree into a new file using in-order.
 
-   👉 For Solution [check here](AVLTree.java)
+   👉 For Solution [check here](./AVL%20Trees/AVLTree.java)
 
 2. 📂 Construct B-Tree of order 5 with a set of 100 random elements stored in an array. Implement searching, insertion, and deletion operations.
 

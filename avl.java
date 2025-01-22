@@ -1,24 +1,29 @@
 // AVL tree implementation in Java
 // Tree class
-class AVLTree {
+class AVL {
     // Create node
     class Node {
         int item, height;
         Node left, right;
+
         Node(int d) {
-        item = d;
-        height = 1;
+            item = d;
+            height = 1;
+        }
     }
-    }
+
     Node root;
+
     int height(Node N) {
         if (N == null)
             return 0;
         return N.height;
     }
+
     int max(int a, int b) {
         return (a > b) ? a : b;
     }
+
     Node rightRotate(Node y) {
         Node x = y.left;
         Node T2 = x.right;
@@ -28,6 +33,7 @@ class AVLTree {
         x.height = max(height(x.left), height(x.right)) + 1;
         return x;
     }
+
     Node leftRotate(Node x) {
         Node y = x.right;
         Node T2 = y.left;
@@ -37,12 +43,14 @@ class AVLTree {
         y.height = max(height(y.left), height(y.right)) + 1;
         return y;
     }
+
     // Get balance factor of a node
     int getBalanceFactor(Node N) {
         if (N == null)
             return 0;
         return height(N.left) - height(N.right);
     }
+
     // Insert a node
     Node insertNode(Node node, int item) {
         // Find the position and insert the node
@@ -74,14 +82,16 @@ class AVLTree {
                 return leftRotate(node);
             }
         }
-            return node;
+        return node;
     }
-        Node nodeWithMimumValue(Node node) {
-            Node current = node;
-            while (current.left != null)
+
+    Node nodeWithMimumValue(Node node) {
+        Node current = node;
+        while (current.left != null)
             current = current.left;
-            return current;
+        return current;
     }
+
     // Delete a node
     Node deleteNode(Node root, int item) {
         // Find the node to be deleted and remove it
@@ -122,16 +132,17 @@ class AVLTree {
                 return rightRotate(root);
             }
         }
-            if (balanceFactor < -1) {
-                if (getBalanceFactor(root.right) <= 0) {
-                    return leftRotate(root);
+        if (balanceFactor < -1) {
+            if (getBalanceFactor(root.right) <= 0) {
+                return leftRotate(root);
             } else {
                 root.right = rightRotate(root.right);
                 return leftRotate(root);
             }
         }
-            return root;
+        return root;
     }
+
     void preOrder(Node node) {
         if (node != null) {
             System.out.print(node.item + " ");
@@ -139,25 +150,27 @@ class AVLTree {
             preOrder(node.right);
         }
     }
+
     // Print the tree
     private void printTree(Node currPtr, String indent, boolean last) {
         if (currPtr != null) {
             System.out.print(indent);
-        if (last) {
-            System.out.print("R----");
-            indent += " ";
-        } else {
-            System.out.print("L----");
-            indent += "| ";
-        }
-        System.out.println(currPtr.item);
+            if (last) {
+                System.out.print("R----");
+                indent += " ";
+            } else {
+                System.out.print("L----");
+                indent += "| ";
+            }
+            System.out.println(currPtr.item);
             printTree(currPtr.left, indent, false);
             printTree(currPtr.right, indent, true);
         }
     }
+
     // Driver code
     public static void main(String[] args) {
-        AVLTree tree = new AVLTree();
+        AVL tree = new AVL();
         tree.root = tree.insertNode(tree.root, 33);
         tree.root = tree.insertNode(tree.root, 13);
         tree.root = tree.insertNode(tree.root, 53);
