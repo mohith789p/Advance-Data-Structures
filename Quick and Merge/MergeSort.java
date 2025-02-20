@@ -79,7 +79,7 @@ public class MergeSort {
             bestArr[i] = i;
         }
         startTime = System.nanoTime();
-        displayArray(bestArr);  /
+        displayArray(bestArr);
         mergeSort(bestArr);
         endTime = System.nanoTime();
         System.out.println("MergeSort (Best Case) Time: " + (endTime - startTime) + " ns");
