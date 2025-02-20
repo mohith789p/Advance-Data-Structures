@@ -14,18 +14,20 @@
    a) 📊 Adjacency Matrix  
    b) 🗂️ Adjacency Lists
 
-5. 🖇️ Write a program for finding the biconnected components in a given graph.
+    👉 For Solution [check here](./BFS%20and%20DFS)
+   
+6. 🖇️ Write a program for finding the biconnected components in a given graph.
 
-6. ⚡ Implement Quick sort and Merge sort and observe the execution time for various input sizes (Average, Worst, and Best cases).
+7. ⚡ Implement Quick sort and Merge sort and observe the execution time for various input sizes (Average, Worst, and Best cases).
 
-7. 🚀 Compare the performance of Single Source Shortest Paths using the Greedy method when the graph is represented by:  
+8. 🚀 Compare the performance of Single Source Shortest Paths using the Greedy method when the graph is represented by:  
    a) 📊 Adjacency Matrix  
    b) 🗂️ Adjacency Lists
 
-8. 🕒 Implement Job Sequencing with deadlines using the Greedy strategy.
+9. 🕒 Implement Job Sequencing with deadlines using the Greedy strategy.
 
-9. 🎒 Write a program to solve the 0/1 Knapsack problem using Dynamic Programming.
+10. 🎒 Write a program to solve the 0/1 Knapsack problem using Dynamic Programming.
 
-10. 👑 Implement the N-Queens Problem using Backtracking.
+11. 👑 Implement the N-Queens Problem using Backtracking.
 
-11. 🔙 Use Backtracking strategy to solve the 0/
+12. 🔙 Use Backtracking strategy to solve the 0/
