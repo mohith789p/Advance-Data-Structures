@@ -46,7 +46,7 @@ public class QuickSort {
         Random rand = new Random();
     
         // Average case: Random array
-        int[] avgArr = rand.ints(25, 0, 100).toArray();
+        int[] avgArr = rand.ints(25, 0, 1000).toArray();
         System.out.println("Average Case (Before Sorting):");
         printArray(avgArr);  // Display the array before sorting
         long startTime = System.nanoTime();
