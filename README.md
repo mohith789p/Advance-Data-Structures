@@ -20,6 +20,8 @@
 
 7. ⚡ Implement Quick sort and Merge sort and observe the execution time for various input sizes (Average, Worst, and Best cases).
 
+    👉 For Solution [check here](./Quick%20and%20Merge)
+
 8. 🚀 Compare the performance of Single Source Shortest Paths using the Greedy method when the graph is represented by:  
    a) 📊 Adjacency Matrix  
    b) 🗂️ Adjacency Lists
