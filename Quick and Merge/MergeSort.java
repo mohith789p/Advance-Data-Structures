@@ -40,6 +40,13 @@ public class MergeSort {
             arr[k++] = right[j++];
         }
     }
+    
+    private static void displayArray(int[] arr) {
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
 
     // Driver method to test the sorting and measure execution time
     public static void main(String[] args) {
@@ -47,10 +54,12 @@ public class MergeSort {
 
         // Average case: Random array
         int[] avgArr = rand.ints(1000, 0, 10000).toArray();
+        displayArray(avgArr); 
         long startTime = System.nanoTime();
         mergeSort(avgArr);
         long endTime = System.nanoTime();
         System.out.println("MergeSort (Average Case) Time: " + (endTime - startTime) + " ns");
+        displayArray(avgArr);
 
         // Worst case: Sorted in descending order
         int[] worstArr = new int[1000];
@@ -58,9 +67,11 @@ public class MergeSort {
             worstArr[i] = 10000 - i;
         }
         startTime = System.nanoTime();
+        displayArray(worstArr); 
         mergeSort(worstArr);
         endTime = System.nanoTime();
         System.out.println("MergeSort (Worst Case) Time: " + (endTime - startTime) + " ns");
+        displayArray(worstArr); 
 
         // Best case: Sorted array
         int[] bestArr = new int[1000];
@@ -68,8 +79,10 @@ public class MergeSort {
             bestArr[i] = i;
         }
         startTime = System.nanoTime();
+        displayArray(bestArr);  /
         mergeSort(bestArr);
         endTime = System.nanoTime();
         System.out.println("MergeSort (Best Case) Time: " + (endTime - startTime) + " ns");
+        displayArray(bestArr);
     }
 }
