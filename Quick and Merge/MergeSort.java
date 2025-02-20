@@ -53,36 +53,44 @@ public class MergeSort {
         Random rand = new Random();
 
         // Average case: Random array
-        int[] avgArr = rand.ints(1000, 0, 10000).toArray();
+        int[] avgArr = rand.ints(25, 0, 1000).toArray();
+        System.out.print("Before Sorting: ");
         displayArray(avgArr); 
         long startTime = System.nanoTime();
         mergeSort(avgArr);
         long endTime = System.nanoTime();
         System.out.println("MergeSort (Average Case) Time: " + (endTime - startTime) + " ns");
+        System.out.print("After Sorting: ");
         displayArray(avgArr);
+        System.out.println();
 
         // Worst case: Sorted in descending order
-        int[] worstArr = new int[1000];
+        int[] worstArr = new int[25];
         for (int i = 0; i < worstArr.length; i++) {
-            worstArr[i] = 10000 - i;
+            worstArr[i] = 1000 - i;
         }
         startTime = System.nanoTime();
+        System.out.print("Before Sorting: ");
         displayArray(worstArr); 
         mergeSort(worstArr);
         endTime = System.nanoTime();
         System.out.println("MergeSort (Worst Case) Time: " + (endTime - startTime) + " ns");
+        System.out.print("After Sorting: ");
         displayArray(worstArr); 
+        System.out.println();
 
         // Best case: Sorted array
-        int[] bestArr = new int[1000];
+        int[] bestArr = new int[25];
         for (int i = 0; i < bestArr.length; i++) {
             bestArr[i] = i;
         }
         startTime = System.nanoTime();
+        System.out.print("Before Sorting: ");
         displayArray(bestArr);
         mergeSort(bestArr);
         endTime = System.nanoTime();
         System.out.println("MergeSort (Best Case) Time: " + (endTime - startTime) + " ns");
+        System.out.print("After Sorting: ");
         displayArray(bestArr);
     }
 }
