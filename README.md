@@ -10,6 +10,8 @@
 
 3. 🏔️ Construct Min and Max Heap using arrays, delete any element, and display the content of the Heap.
 
+   👉 For Solution [check here](./Heap)
+
 4. 🔄 Implement BFT and DFT for the given graph, when the graph is represented by:  
    a) 📊 Adjacency Matrix  
    b) 🗂️ Adjacency Lists
