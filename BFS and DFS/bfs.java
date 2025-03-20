@@ -1,5 +1,4 @@
 import java.util.*;
-
 class BFS{
     public static void main(String[] args) {
         int v = 4;
@@ -26,14 +25,14 @@ class BFS{
     }
 
     static void bfs(List<List<Integer>> adj, int start){
-        List<Integer> q = new ArrayList<>();
+        Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[adj.size()];
         visited[start] = true;
         q.add(start);
         while(!q.isEmpty()){
-            int v = q.get(0);
+            int v = q.poll();
             System.out.print(v + " ");
-            q.remove(0);
+
             for(int i : adj.get(v)){
                 if (!visited[i]) {
                     q.add(i);
