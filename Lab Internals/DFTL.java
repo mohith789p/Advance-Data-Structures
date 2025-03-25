@@ -2,9 +2,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Stack;
+
 class DFTL {
     private List<List<Integer>> adjList;
     private int vertices;
+
     public DFTL(int size) {
         vertices = size;
         adjList = new ArrayList<>();
@@ -12,10 +14,12 @@ class DFTL {
             adjList.add(new LinkedList<>());
         }
     }
+
     public void addEdge(int u, int v) {
         adjList.get(u).add(v);
         adjList.get(v).add(u);
     }
+
     public void printDFT(int start) {
         boolean[] visited = new boolean[vertices];
         Stack<Integer> stack = new Stack<>();
@@ -35,6 +39,7 @@ class DFTL {
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
         DFTL graph = new DFTL(5);
         graph.addEdge(0, 1);

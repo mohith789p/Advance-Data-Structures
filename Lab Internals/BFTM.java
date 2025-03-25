@@ -33,6 +33,7 @@ class BFTM {
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
         BFTM graph = new BFTM(5);
         graph.addEdge(0, 1);

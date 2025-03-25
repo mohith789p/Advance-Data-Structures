@@ -11,7 +11,7 @@ class MaxHeap {
         if (size < heap.length) {
             heap[size] = value;
             int index = size;
-            while (index > 0) { 
+            while (index > 0) {
                 int parent = (index - 1) / 2;
                 if (heap[index] > heap[parent]) {
                     swap(index, parent);
@@ -32,7 +32,7 @@ class MaxHeap {
         size--;
 
         int index = 0;
-        while (true) { 
+        while (true) {
             int left = 2 * index + 1;
             int right = 2 * index + 2;
             int largest = index;
