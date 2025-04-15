@@ -15,6 +15,11 @@ This repository contains the lab internal programs and resources for the **Advan
 - [QuickSort.java](./QuickSort.java) - Implements the Quick Sort algorithm.
 - [SSSPAL.java](./SSSPAL.java) - Implements Dijkstra’s Algorithm using an adjacency list.
 - [SSSPAM.java](./SSSPAM.java) - Implements Dijkstra’s Algorithm using an adjacency matrix.
+- [TSPBranchBound.java](./TSPBranchBound.java) - Solves the Traveling Salesman Problem using the Branch and Bound approach.
+- [NQueens.java](./NQueens.java) - Solves the N-Queens problem using backtracking.
+- [KnapsackDP.java](./KnapsackDP.java) - Solves the Knapsack problem using dynamic programming.
+- [KnapsackBT.java](./KnapsackBT.java) - Solves the Knapsack problem using backtracking.
+- [all.txt](./all.txt) - Contains a summary or additional information about the programs.
 
 ## How to Use
 
